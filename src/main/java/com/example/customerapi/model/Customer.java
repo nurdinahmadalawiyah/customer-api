@@ -2,12 +2,14 @@ package com.example.customerapi.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "customer")
+@Document(indexName = "customer")
 public class Customer {
 
     @Id

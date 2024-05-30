@@ -41,4 +41,8 @@ public class CustomerController {
         customerService.deleteCustomer(id);
     }
 
+    @GetMapping("/search")
+    public List<Customer> searchCustomerByName(@RequestParam String name) {
+        return customerService.searchCustomerByName(name);
+    }
 }
